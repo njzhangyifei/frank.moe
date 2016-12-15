@@ -1,0 +1,194 @@
+@keyframes fadein {
+    0% { opacity: 0;  }
+    20% { opacity: 0;  }
+    100%   { opacity: 1;  }
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 1rem;
+    animation: fadein 1s;
+    animation-timing-function: ease-in-out;
+}
+a {
+    color: #00B7FF;
+}
+
+h1 {
+    position: absolute;
+}
+
+p {
+    position: absolute;
+}
+
+#canvas {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.abs-container {
+    position:absolute;
+}
+
+.abs-container *{
+    position:relative;
+}
+
+.abs-container.upper {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.abs-container.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.abs-container.lower {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.abs-container.quote {
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.quote {
+    animation: fadein 1s;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    color: #222;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    font-family:
+    "Palatino Linotype", "Book Antiqua", Palatino,
+    "FangSong", "仿宋", "STFangSong", "华文仿宋", "SimSun",
+    "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.quote span{
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.links {
+    animation: fadein 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    display: inline-block;
+    font-size: 1.0rem;
+    width: 10rem;
+    max-width: 25%;
+    color: black;
+    text-decoration: none;
+    /* margin-left: 2.5%; */
+    /* margin-right: 2.5%; */
+}
+
+.shutter-vertical {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.shutter-vertical:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0; bottom: 0; left:0%; right:0;
+    background: rgba(0, 0, 0, 1);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.shutter-vertical:hover, .shutter-vertical:focus, .shutter-vertical:active {
+    color:white;
+}
+
+
+.shutter-vertical:hover:before, .shutter-vertical:focus:before, .shutter-vertical:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.typed-strings {
+    display: none;
+}
+
+.typed-text {
+    font-size: 2rem;
+}
+
+.typed-cursor{
+    font-size: 2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1;  }
+    50% { opacity:0;  }
+    100% { opacity:1;  }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1;  }
+    50% { opacity:0;  }
+    100% { opacity:1;  }
+}
+@-moz-keyframes blink{
+    0% { opacity:1;  }
+    50% { opacity:0;  }
+    100% { opacity:1;  }
+}

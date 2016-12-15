@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name='viewport' content ='width=device-width, initial-scale=1, user-scalable=no')
+    if env=="development"
+        script(src="reload/reload.js")
+  body
+    block content

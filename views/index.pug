@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    script(src='main/bundle.js')
+    canvas#canvas
+    if env=="development"
+        //- h1=env
+    div.abs-container.upper.text-center.width-80
+        div.typed-strings#typed-caption-strings
+            each val in caption.strings
+                p!=val
+        span.typed-text#typed-caption
+    div.abs-container.lower.text-center.width-100
+        each val in links
+            a(href=val.link)
+                ul.text-center.links.shutter-vertical
+                    li=val.title
+                    li=val.title_cn
+    div.abs-container.quote.text-center.width-100
+        each val in quotes
+            p!=val
