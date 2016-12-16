@@ -56,6 +56,8 @@ app.use('/', index);
 if (!isProduction) {
     console.log("Express server up and running, reloading");
     reload(server, app);
+} else {
+    console.log("Express server up running in production");
 }
 
 // catch 404 and forward to error handler
