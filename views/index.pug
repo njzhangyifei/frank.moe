@@ -1,5 +1,10 @@
 extends layout
 
+block head
+    meta(name='description' content="frank.moe | Yifei Zhang")
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    link(rel='stylesheet', href='/stylesheets/index.css')
+
 block content
     script(src='main/bundle.js')
     canvas#canvas
