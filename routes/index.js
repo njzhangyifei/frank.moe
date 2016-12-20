@@ -38,8 +38,17 @@ router.get('/', function(req, res, next) {
         '\'I cannot rest from travel, I will drink life to the lees\'',
         // '「我不能停止跋涉<span>，</span>我決心飲盡生命之杯」'
         // '「山里は<span> </span>冬ぞさびしき<span> </span>まさりける<span> </span>人目も草も<span> </span>かれぬと思へば」'
-        '-- Merry Christmas<span> </span>聖誕快樂 --'
     ];
+    
+    var date = new Date();
+    var month = date.getUTCMonth();
+    var day = date.getUTCDate();
+
+    if (month == 11 && (day >= 18 && day <=27)) {
+        quotes.push('-- Merry Christmas<span> </span>聖誕快樂 --');
+    } else if ((month == 11 && day > 27) || (month == 0 && day < 7)) {
+        quotes.push('-- Happy New Year<span> </span>新年快樂 --');
+    }
 
     res.render('index', {
         title: '歡迎 | Welcome | frank.moe',
