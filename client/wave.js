@@ -60,6 +60,7 @@ Wave.prototype.draw = function(context) {
     var interpolate = this.spline.interpolate(0);
     var previous = {x: interpolate.x, y: interpolate.y};
     var previousMidpoint = null;
+    context.moveTo(previous.x, previous.y);
     context.beginPath();
     context.strokeStyle = this.rgba;
     for (var i = 0; i < this.resolution; i++) {
@@ -69,7 +70,6 @@ Wave.prototype.draw = function(context) {
             y:previous.y + (interpolate.y - previous.y) * 0.5, 
         }
         if (previousMidpoint) {
-            context.moveTo(previousMidpoint.x, previousMidpoint.y);
             context.quadraticCurveTo(previous.x, previous.y, midpoint.x, midpoint.y);
         }
         previousMidpoint = midpoint;
