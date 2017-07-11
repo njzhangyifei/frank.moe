@@ -5,8 +5,11 @@ function RandomColorWaves(numWaves, canvasHeight, canvasWidth, pointCount, resol
     this.numWaves = numWaves;
     this.height = canvasHeight;
     this.width = canvasWidth;
+    hue = ['red', 'orange', 'green', 'blue', 'purple', 'pink', 'monochrome']
+    this.hue = hue[Math.floor(Math.random() * hue.length)]
     this.colors = randomColor({
         count: this.numWaves,
+        hue: this.hue,
         luminosity: 'dark',
         format: 'rgba',
         alpha: 0
