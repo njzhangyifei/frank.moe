@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
         {
             title:'About',
             title_cn:'關於',
-            link: '#'
+            link: 'https://about.me/njzyf'
         },
     ];
 
