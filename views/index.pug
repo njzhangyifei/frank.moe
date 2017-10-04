@@ -20,6 +20,8 @@ block content
             a(href=val.link)
                 ul.text-center.links.shutter-vertical
                     li=val.title
+                        if val.new_icon
+                            span.new-icon NEW
                     li=val.title_cn
     div.abs-container.quote.text-center.width-100
         each val in quotes

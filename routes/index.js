@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
         {
             title:'Garage',
             title_cn:'車庫',
-            link: 'https://garage.frank.moe'
+            link: 'https://garage.frank.moe',
+            new_icon: true
         },
         {
             title:'About',

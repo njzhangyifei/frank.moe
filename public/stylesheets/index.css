@@ -85,7 +85,7 @@ p {
 .quote {
     animation: fadein 1s;
     animation-fill-mode: both;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-timing-function: ease-in-out;
     color: #222;
     font-size: 0.8rem;
@@ -108,9 +108,9 @@ ul {
 }
 
 .links {
-    animation: fadein 1s;
+    animation: fadein 0.5s;
     animation-fill-mode: both;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-timing-function: ease-in-out;
     display: inline-block;
     font-size: 1.0rem;
@@ -175,6 +175,21 @@ ul {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+}
+
+.new-icon {
+    position: absolute;
+    left: calc(50% - 0.75rem - 4px);
+    top: 2.7rem;
+    font-size: 0.5rem;
+    width: 1.5rem;
+    color: white;
+    text-align: center;
+    background: red;
+    padding: 2px 5px;
+    border-radius: 30px 30px 30px 30px;
+    text-decoration: none;
+    display: block;
 }
 
 @keyframes blink{
