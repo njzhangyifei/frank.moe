@@ -178,6 +178,7 @@ ul {
 }
 
 .new-icon {
+    animation-delay: 2s;
     position: absolute;
     left: calc(50% - 0.75rem - 4px);
     top: 2.7rem;

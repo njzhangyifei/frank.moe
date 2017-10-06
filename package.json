@@ -7,10 +7,12 @@
         "deploy": "node deploy"
     },
     "dependencies": {
+        "animate.css": "^3.5.2",
         "body-parser": "~1.15.2",
         "cookie-parser": "~1.4.3",
         "debug": "~2.2.0",
         "express": "~4.14.0",
+        "gulp": "^3.9.1",
         "morgan": "~1.7.0",
         "pug": "~2.0.0-beta6",
         "serve-favicon": "~2.3.0"
