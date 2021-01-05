@@ -1,12 +1,12 @@
 var RandomColorWaves = require('./randomColorWaves.js')
-var typed = require('typed.js')
+import Typed from 'typed.js';
 
 var waves;
 
 function loaded() {
     canvasInit();
-    $('#typed-caption').typed({
-        stringsElement: $('#typed-caption-strings'),
+    var typed = new Typed('#typed-caption', {
+        stringsElement: '#typed-caption-strings',
         contentType: 'html',
         typeSpeed: 50,
         startDelay: 500,

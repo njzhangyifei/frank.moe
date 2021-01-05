@@ -2,7 +2,7 @@
 if (process.env.NODE_ENV === 'production') {
     console.log('deploy begin, running webpack with production config...')
     var child_process = require('child_process');
-    child_process.exec("webpack -p --config webpack.production.config.js", function (error, stdout, stderr) {
+    child_process.exec("webpack bundle --mode=production --config webpack.production.config.js", function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
         if (error !== null) {

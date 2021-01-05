@@ -9,7 +9,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var logger = require('morgan');
 
 var isProduction = process.env.NODE_ENV === 'production';
 var reload;
@@ -25,10 +25,6 @@ if (!isProduction) {
     app.use(webpackDevMiddleware(compiler, {
         // public path should be the same with webpack config
         publicPath: webpackDevConfig.output.publicPath,
-        noInfo: false,
-        stats: {
-            colors: true
-        }
     }));
     app.use(webpackHotMiddleware(compiler));
 }
@@ -40,8 +36,8 @@ app.set('view engine', 'pug');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -55,7 +51,7 @@ app.use('/', index);
 
 if (!isProduction) {
     console.log("Express server up and running, reloading");
-    reload(server, app);
+    reload(app);
 } else {
     console.log("Express server up running in production");
 }

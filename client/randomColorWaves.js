@@ -21,7 +21,7 @@ function RandomColorWaves(numWaves, canvasHeight, canvasWidth, pointCount, resol
             this.width, Math.max(this.height * 0.15, 150),
             this.height * 0.5, this.colors[i]
             );
-        console.log(this.height * 0.2);
+        // console.log(this.height * 0.2);
         w.seedIncrement *= Math.max(0.5, 0.5*i/numWaves*2);
         this.waves.push(w);
     }
