@@ -10,12 +10,10 @@ module.exports = {
     path: path.resolve('./dist'),
     filename: './[name]/bundle.js'
   },
-  devtool: 'source-map',
   optimization: {
     minimize: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
