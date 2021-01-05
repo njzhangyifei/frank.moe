@@ -2,7 +2,15 @@ var webpack = require('webpack'),
     webpackDevMiddleware = require('webpack-dev-middleware'),
     webpackHotMiddleware = require('webpack-hot-middleware'),
     webpackDevConfig = require('./webpack.config.js');
-var compiler = webpack(webpackDevConfig);
+    webpackProdConfig = require('./webpack.production.config.js');
+var isProduction = process.env.NODE_ENV === 'production';
+
+var compiler;
+if (isProduction) {
+  compiler = webpack(webpackProdConfig);
+} else {
+  compiler = webpack(webpackDevConfig);
+}
 
 var express = require('express');
 var path = require('path');
@@ -11,7 +19,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var isProduction = process.env.NODE_ENV === 'production';
 var reload;
 if (!isProduction) {
     reload = require('reload')
